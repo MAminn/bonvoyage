@@ -31,14 +31,13 @@ const Header = () => {
     <header
       className={`${
         headerActive ? "h-[100px]" : "h-[124px]"
-      } sticky max-w-[1920px] top-0 w-full bg-primary-200 h-[90px] transition-all z-50 `}
-    >
-      <div className="container mx-auto h-full flex items-center justify-between">
+      } fixed max-w-[1920px] top-0 w-full bg-transparent backdrop-blur-sm h-[90px] transition-all z-50 `}>
+      <div className='container mx-auto h-full flex items-center justify-between'>
         {/* Logo */}
-        <Link href="/">
+        <Link href='/'>
           <Image
             src={"/assets/img/logo.png"}
-            alt="logo"
+            alt='logo'
             width={160}
             height={55}
           />
@@ -52,26 +51,25 @@ const Header = () => {
               : "max-h-0 pt-0 pb-0 overflow-hidden border-white/0"
           }
           
-          flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 text-base uppercase font-medium text-white transition-all lg:hidden`}
+          flex flex-col text-center gap-8 fixed bg-black/20 backdrop-blur-md w-full left-0 text-base uppercase font-medium text-white transition-all lg:hidden`}
         />
         {/* desktop nav */}
-        <Nav containerStyles="flex gap-10 hidden lg:flex text-white text-base uppercase font-medium transition-all" />
+        <Nav containerStyles='flex gap-10 hidden lg:flex text-white text-base uppercase font-medium transition-all' />
         {/* hide/open menu button */}
-        <div className=" flex items-center gap-4">
+        <div className=' flex items-center gap-4'>
           {/* login and register buttons */}
-          <div className=" text-white flex items-center gap-4 ">
-            <button className=" hover:text-accent transition-all text-base uppercase font-medium text-[#333333]">
+          <div className=' text-white flex items-center gap-4 '>
+            <button className=' hover:text-accent transition-all text-base uppercase font-medium text-[#333333]'>
               <FaSearch size={25} />
             </button>
-            <button className=" hover:text-accent transition-all text-base uppercase font-medium text-[#333333]">
+            <button className=' hover:text-accent transition-all text-base uppercase font-medium text-[#333333]'>
               <FaShoppingCart size={26} />
             </button>
           </div>
           <button
-            className=" text-[#333333] lg:hidden"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            <MdMenu className=" text-4xl" />
+            className=' text-[#333333] lg:hidden'
+            onClick={() => setOpenNav(!openNav)}>
+            <MdMenu className=' text-4xl' />
           </button>
         </div>
       </div>

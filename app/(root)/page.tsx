@@ -6,12 +6,12 @@ import Services from "@/components/Services";
 
 const HomePage = () => {
   return (
-    <main>
+    <main className='relative'>
       <Hero />
       <Brands />
       <Recommendations />
       <Achievements />
-      <Services/>
+      <Services />
     </main>
   );
 };
